@@ -13,6 +13,7 @@ public class Calculator {
 	}
 
 	public double calc() {
+		
 		switch (operation) {
 		case "+":
 			result = first + second;			
@@ -32,9 +33,11 @@ public class Calculator {
 		default:
 			result = 0;
 			break;
-			//System.out.println("Error enter symbol operation !");			
+						
 		}
 		return result;
 	}
+
+	
 
 }

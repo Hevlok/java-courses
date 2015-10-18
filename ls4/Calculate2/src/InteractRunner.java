@@ -7,24 +7,48 @@ public class InteractRunner {
 		double first;
 		double second;
 		String operation;
-		String s = "NO";
+		double result = 0;
+		boolean res = false;
 
 		try {
-			while (s.equals("NO")) {
-				System.out.println("Enter first value !");
-				first = sc.nextDouble();
-				System.out.println("Select operation: (+ - * / e)");
+			while (true) {
+				if (res) {
+					first = result;
+				} else {
+					System.out.println("Enter first value !"); // Ввод первого
+																// значения
+					first = sc.nextDouble();
+				}
+
+				System.out.println("Select operation: (+ - * / e)"); // Указание
+																		// операции
+																		// вычисления
 				operation = sc.next();
-				System.out.println("Enter second value !");
+
+				System.out.println("Enter second value !"); // Ввод второго
+															// значения
 				second = sc.nextDouble();
-				System.out.println(new Calculator(first, operation, second).calc());
-				System.out.println("Do you want exit ?");
-				System.out.println("Press 'Y' to exit / Press 'N' to continue !");
-				if (sc.next().equals("[yY]"))
+				result = new Calculator(first, operation, second).calc();
+				System.out.println(result); // Вывод
+											// результата
+											// операции
+
+				System.out.println("Press 'y' to exit / Press any symbol to continue !");// Выйти
+																							// или
+																							// продолжить
+				String st = sc.next();// Проверка выйти или
+										// продолжить
+				if (st.equals("y")) {
+					System.out.println("Buy buy");
 					break;
-				else if (sc.next().equals("[nN]"))
-					System.out.println("Clear 'result' ?");
-				break;
+				} else {
+					System.out.println("Press 'y' to clear 'result' / Press any symbol 'result' save and use !");
+					if (!sc.next().equals("y")) {
+						res = true;
+					} else {
+						
+					}
+				}
 
 			}
 		} finally {

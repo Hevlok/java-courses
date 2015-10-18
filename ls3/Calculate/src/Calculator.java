@@ -17,7 +17,7 @@ public class Calculator {
 			this.second=s;
 			System.out.println(first-second);
 			break;
-		case "*":
+		case "u":
 			this.first=f;
 			this.second=s;
 			System.out.println(first*second);

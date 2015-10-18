@@ -45,6 +45,7 @@ public class InteractRunner {
 					System.out.println("Press 'y' to clear 'result' / Press any symbol 'result' save and use !");
 					if (!sc.next().equals("y")) {
 						res = true;
+						System.out.println("First value:"+"\r"+result);
 					} else {
 						res=false;
 					}

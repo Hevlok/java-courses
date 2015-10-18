@@ -37,7 +37,7 @@ public class InteractRunner {
 																							// или
 																							// продолжить
 				String st = sc.next();// Проверка выйти или
-										// продолжить
+										// продолжить...
 				if (st.equals("y")) {
 					System.out.println("Buy buy");
 					break;

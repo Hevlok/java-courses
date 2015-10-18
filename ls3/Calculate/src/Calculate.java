@@ -4,7 +4,7 @@ public class Calculate {
 		double first=Double.parseDouble(args[0]);
 		String el=args[1];		
 		double second=Double.parseDouble(args[2]);	
-		new Calculator(first, el, second);
+		System.out.println(new Calculator(first, el, second).calc());
 		
 	}
 }

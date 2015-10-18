@@ -1,38 +1,42 @@
-
 public class Calculator {
 	private double first;
 	private double second;
-	private String element;
+	private String operation;
+	private double result;
 
-	public Calculator(Double f,String el,Double s){
-		this.element=el;
-		switch(element){
+	public Calculator(Double f, String el, Double s) {
+		this.operation = el;
+		this.first = f;
+		this.second = s;		
+
+	}
+
+	public double calc() {
+		
+		switch (operation) {
 		case "+":
-			this.first=f;
-			this.second=s;
-			System.out.println(first+second);
+			result = first + second;			
 			break;
 		case "-":
-			this.first=f;
-			this.second=s;
-			System.out.println(first-second);
+			result = first - second;			
 			break;
-		case "u":
-			this.first=f;
-			this.second=s;
-			System.out.println(first*second);
+		case "*":
+			result = first * second;			
 			break;
 		case "/":
-			this.first=f;
-			this.second=s;
-			System.out.println(first/second);
+			result = first / second;			
 			break;
 		case "e":
-			this.first=f;
-			this.second=s;
-			System.out.println(Math.pow(first, second));
+			result = Math.pow(first, second);			
 			break;
-		}		
-	}	
+		default:
+			result = 0;
+			break;
+						
+		}
+		return result;
+	}
+
 	
+
 }

@@ -8,24 +8,23 @@ public class InteractRunner {
 		double second;
 		String operation;
 		String s = "NO";
-		
+
 		try {
 			while (s.equals("NO")) {
-				System.out.println("Enter first value !"+"\r");
+				System.out.println("Enter first value !");
 				first = sc.nextDouble();
-				System.out.println("Enter operation!"+"\r");
+				System.out.println("Select operation: (+ - * / e)");
 				operation = sc.next();
-				System.out.println("Enter second value !"+"\r");
+				System.out.println("Enter second value !");
 				second = sc.nextDouble();
-				new Calculator(first, operation, second);
-				System.out.println("Do you want exit ?"+"\r");
-				System.out.println("Press 'Y' to exit / Press 'N' to continue !"+"\r");
-				if(sc.next().equals("[yY]")) break;
-				else if(sc.next().equals("[nN]"))
-					System.out.println("Clear 'result' ?"+"\r");
+				System.out.println(new Calculator(first, operation, second).calc());
+				System.out.println("Do you want exit ?");
+				System.out.println("Press 'Y' to exit / Press 'N' to continue !");
+				if (sc.next().equals("[yY]"))
 					break;
-				
-				
+				else if (sc.next().equals("[nN]"))
+					System.out.println("Clear 'result' ?");
+				break;
 
 			}
 		} finally {

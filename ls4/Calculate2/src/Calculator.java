@@ -2,43 +2,39 @@
 public class Calculator {
 	private double first;
 	private double second;
-	private String element;
-	static double result;
+	private String operation;
+	private double result;
 
-	public Calculator(Double f,String el,Double s){
-		this.element=el;
-		switch(element){
+	public Calculator(Double f, String el, Double s) {
+		this.operation = el;
+		this.first = f;
+		this.second = s;		
+
+	}
+
+	public double calc() {
+		switch (operation) {
 		case "+":
-			this.first=f;
-			this.second=s;
-			result=first+second;
-			System.out.println(result);
+			result = first + second;			
 			break;
 		case "-":
-			this.first=f;
-			this.second=s;
-			result=first-second;
-			System.out.println(result);
+			result = first - second;			
 			break;
 		case "*":
-			this.first=f;
-			this.second=s;
-			result=first*second;
-			System.out.println(result);
+			result = first * second;			
 			break;
 		case "/":
-			this.first=f;
-			this.second=s;
-			result=first/second;
-			System.out.println(result);
+			result = first / second;			
 			break;
 		case "e":
-			this.first=f;
-			this.second=s;
-			result=Math.pow(first, second);
-			System.out.println(result);
+			result = Math.pow(first, second);			
 			break;
-		}		
-	}	
-	
+		default:
+			result = 0;
+			break;
+			//System.out.println("Error enter symbol operation !");			
+		}
+		return result;
+	}
+
 }

@@ -46,11 +46,11 @@ public class InteractRunner {
 					if (!sc.next().equals("y")) {
 						res = true;
 					} else {
-						
+						res=false;
 					}
 				}
 
-			}
+			} 
 		} finally {
 			sc.close();
 		}

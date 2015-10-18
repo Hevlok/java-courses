@@ -6,6 +6,7 @@ public class InteractRunner {
 		Scanner sc= new Scanner(System.in);		
 		double first;
 		double second;
+		
 		String operation;
 		String s="NO";
 		//System.out.printlsn("Enter first value !");
@@ -16,7 +17,7 @@ public class InteractRunner {
 			operation=sc.next();
 			System.out.println("Enter second value !");
 			second=sc.nextDouble();
-			new Calculator(first, operation, second);
+			result=new Calculator(first, operation, second);
 			
 		}
 

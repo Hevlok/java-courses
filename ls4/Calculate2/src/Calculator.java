@@ -3,6 +3,7 @@ public class Calculator {
 	private double first;
 	private double second;
 	private String element;
+	static double result;
 
 	public Calculator(Double f,String el,Double s){
 		this.element=el;
@@ -10,27 +11,32 @@ public class Calculator {
 		case "+":
 			this.first=f;
 			this.second=s;
-			System.out.println(first+second);
+			result=first+second;
+			System.out.println(result);
 			break;
 		case "-":
 			this.first=f;
 			this.second=s;
-			System.out.println(first-second);
+			result=first-second;
+			System.out.println(result);
 			break;
 		case "*":
 			this.first=f;
 			this.second=s;
-			System.out.println(first*second);
+			result=first*second;
+			System.out.println(result);
 			break;
 		case "/":
 			this.first=f;
 			this.second=s;
-			System.out.println(first/second);
+			result=first/second;
+			System.out.println(result);
 			break;
 		case "e":
 			this.first=f;
 			this.second=s;
-			System.out.println(Math.pow(first, second));
+			result=Math.pow(first, second);
+			System.out.println(result);
 			break;
 		}		
 	}	

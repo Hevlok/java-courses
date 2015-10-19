@@ -8,7 +8,6 @@ public class Calculator {
 		this.operation = el;
 		this.first = f;
 		this.second = s;		
-
 	}
 
 	public double calc() {
@@ -31,12 +30,9 @@ public class Calculator {
 			break;
 		default:
 			result = 0;
-			break;
-						
+			break;						
 		}
 		return result;
-	}
-
-	
+	}	
 
 }

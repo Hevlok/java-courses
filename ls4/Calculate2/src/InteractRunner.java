@@ -4,56 +4,34 @@ public class InteractRunner {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		double first;
-		double second;
-		String operation;
-		double result = 0;
-		boolean res = false;
+		Calculator calculator = new Calculator();
 
-		try {
-			while (true) {
-				if (res) {
-					first = result;
-				} else {
-					System.out.println("Enter first value !"); // Ввод первого
-																// значения
-					first = sc.nextDouble();
+		while (true) {
+
+			if (!calculator.isState()) {
+				System.out.println("Enter first value");
+				calculator.setFirst(Double.parseDouble(sc.next())); 
+			}
+
+			System.out.println("Enter symbol 'operation' (+-*/e)");
+			calculator.setOperation(sc.next());
+
+			System.out.println("Enter second value");
+			calculator.setSecond(Double.parseDouble(sc.next())); 
+			System.out.println("Result: " + calculator.calc());
+
+			System.out.println("Enter 'y' to exit/ or enter any symbol to continue !");
+			if (sc.next().equals("y")) {
+				System.out.println("Bye bye");
+				break;
+			} else {
+				System.out.println("Enter symbol 'y' not save 'result'/ enter any symbol 'result' use next?");
+				if (!sc.next().equals("y")) {				
+					calculator.setState(true);;
+					calculator.setFirst(calculator.getResult());;
 				}
+			}
 
-				System.out.println("Select operation: (+ - * / e)"); // Указание
-																		// операции
-																		// вычисления
-				operation = sc.next();
-
-				System.out.println("Enter second value !"); // Ввод второго
-															// значения
-				second = sc.nextDouble();
-				result = new Calculator(first, operation, second).calc();
-				System.out.println(result); // Вывод
-											// результата
-											// операции
-
-				System.out.println("Press 'y' to exit / Press any symbol to continue !");// Выйти
-																							// или
-																							// продолжить
-				String st = sc.next();// Проверка выйти или
-										// продолжить...
-				if (st.equals("y")) {
-					System.out.println("Buy buy");
-					break;
-				} else {
-					System.out.println("Press 'y' to clear 'result' / Press any symbol 'result' save and use !");
-					if (!sc.next().equals("y")) {
-						res = true;
-						System.out.println("First value:"+"\r"+result);
-					} else {
-						res=false;
-					}
-				}
-
-			} 
-		} finally {
-			sc.close();
 		}
 
 	}

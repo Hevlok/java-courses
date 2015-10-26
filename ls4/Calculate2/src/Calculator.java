@@ -4,13 +4,8 @@ public class Calculator {
 	private double second;
 	private String operation;
 	private double result;
-
-	public Calculator(Double f, String el, Double s) {
-		this.operation = el;
-		this.first = f;
-		this.second = s;		
-
-	}
+	private boolean state=false;
+	
 
 	public double calc() {
 		
@@ -37,6 +32,51 @@ public class Calculator {
 		}
 		return result;
 	}
+	
+	public double getFirst() {
+		return first;
+	}
+
+	public void setFirst(double first) {
+		this.first = first;
+	}
+
+	public double getSecond() {
+		return second;
+	}
+
+	public void setSecond(double second) {
+		this.second = second;
+	}
+
+	public String getOperation() {
+		return operation;
+	}
+
+	public void setOperation(String operation) {
+		this.operation = operation;
+	}
+
+	public double getResult() {
+		return result;
+	}
+
+	public void setResult(double result) {
+		this.result = result;
+	}
+
+	public boolean isState() {
+		return state;
+	}
+
+	public void setState(boolean state) {
+		this.state = state;
+	}
+
+	
+
+	
+
 
 	
 

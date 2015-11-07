@@ -10,9 +10,9 @@ public class CalcTest {
 		Calculator test=new Calculator();
 		test.setFirst(1);
 		test.setSecond(2);
-		test.setOperation("*");
+		test.setOperation("к");
 		double result=test.calc();
-		assertEquals(2.0,result,0.0);
+		assertEquals(0,result,0.0);
 	}
 
 }

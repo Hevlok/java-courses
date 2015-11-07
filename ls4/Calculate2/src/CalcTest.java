@@ -10,9 +10,21 @@ public class CalcTest {
 		Calculator test=new Calculator();
 		test.setFirst(1);
 		test.setSecond(2);
-		test.setOperation("к");
-		double result=test.calc();
-		assertEquals(0,result,0.0);
+		test.setOperation("+");
+		double resultSumm=test.calc();
+		assertEquals(3,resultSumm,0.0);
+		test.setOperation("-");
+		double resultRazn=test.calc();
+		assertEquals(-1,resultRazn,0.0);
+		test.setOperation("/");
+		double resultDel=test.calc();
+		assertEquals(0.5,resultDel,0.0);
+		test.setOperation("*");
+		double resultUmn=test.calc();
+		assertEquals(2,resultUmn,0.0);
+		test.setOperation("e");
+		double resultPow=test.calc();
+		assertEquals(1,resultPow,0.0);
 	}
 
 }

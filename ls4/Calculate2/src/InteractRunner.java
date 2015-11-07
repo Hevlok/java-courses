@@ -28,9 +28,9 @@ public class InteractRunner {
 						System.out.println("Enter symbol 'operation' (+-*/e)"); // Ввод типа операции
 						calculator.setOperation(sc.next());
 
-					} catch (Exception e) {
-											
-						break start;
+					} catch (Exception e) {					// Ловим exception если введено значение не соответствующее цифрам
+						System.out.println("Вводите цифры");
+						break start;						
 					}
 
 				}
@@ -38,9 +38,9 @@ public class InteractRunner {
 				try {
 					System.out.println("Enter second value"); // Ввод второго значения
 					calculator.setSecond(Double.parseDouble(sc.next())); // Перевод string в double
-				} catch (Exception e) {
+				} catch (Exception e) {						// Ловим exception если введено значение не соответствующее цифрам
 					System.out.println("Вводите цифры");	
-					break start;
+					break start;							// Цикл прерывается и стартует с метки 'start:' 
 				}
 				System.out.println("Result: " + calculator.calc()); // Вывод result
 

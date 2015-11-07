@@ -27,14 +27,11 @@ public class InteractRunner {
 						calculator.setFirst(Double.parseDouble(sc.next())); // Перевод string в double
 						System.out.println("Enter symbol 'operation' (+-*/e)"); // Ввод типа операции
 						calculator.setOperation(sc.next());
-
 					} catch (Exception e) {					// Ловим exception если введено значение не соответствующее цифрам
 						System.out.println("Вводите цифры");
 						break start;						
 					}
-
 				}
-
 				try {
 					System.out.println("Enter second value"); // Ввод второго значения
 					calculator.setSecond(Double.parseDouble(sc.next())); // Перевод string в double

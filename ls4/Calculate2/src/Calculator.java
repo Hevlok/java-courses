@@ -1,33 +1,33 @@
 public class Calculator {
-	private double first;			//������ ��������
-	private double second;			//������ ��������
-	private String operation;		//��� ��������
-	private double result;			//��������� ����������
-	private boolean save=false;		//'true' ��������� ��������� ��� �����. ���., 'false' �� ��������� 
+	private double first;			//Первое значение
+	private double second;			//Второе значение
+	private String operation;		//Тип операции
+	private double result;			//Результат вычисления
+	private boolean save=false;		//'true' сохранить результат для дальн. исп., 'false' не сохранять 
 	
 /*
- 	�����  'calc' ��������� ������ ���� �������������� ��������, ��������� ����� �������� 'operation'	
+ 	Метод  'calc' выполняет разные типы арифметических операций, указанные через параметр 'operation'	
 */	
 	public double calc() {
 		
 		switch (operation) {
-		case "+": 
-			result = first + second; 			//C�������			
+		case "+":
+			result = first + second; 			//Cложение			
 			break;
 		case "-":
-			result = first - second;			//���������			
+			result = first - second;			//Вычитание			
 			break;
 		case "*":
-			result = first * second;			//���������			
+			result = first * second;			//Умножение			
 			break;
 		case "/":
-			result = first / second;			//�������			
+			result = first / second;			//Деление			
 			break;
 		case "e":
-			result = Math.pow(first, second);	//���������� � �������		
+			result = Math.pow(first, second);	//Возведение в степень		
 			break;
 		default:
-			result = 0; // � ������ ���� ����� ������ ����� �������� ������ ��������, ����� ������ '0'.
+			result = 0; // В случае если будет введен любой неверный символ операции, метод вернет '0'.
 			break;
 						
 		}
